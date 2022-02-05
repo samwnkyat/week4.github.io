@@ -1,5 +1,5 @@
 export default {
-  porps: ['pages'],
+  props: ['pages'],
   template: `<nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="page-item">

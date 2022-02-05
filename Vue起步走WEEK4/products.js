@@ -76,7 +76,8 @@ const app = createApp({
             axios[method](url, { data: this.tempProduct })
                 .then(res => {
                     console.log(res);
-                    this.getProducts();
+                    this.getData();
+                    this.delProduct();
                     productModal.hide();
                 })
                 .catch((err) => {
@@ -90,7 +91,7 @@ const app = createApp({
 
             axios.delete(url)
                 .then((response) => {
-
+                    alert(response.data.message);
                     this.getProducts();
                     delProductModal.hide();
                 }).catch((err) => {
